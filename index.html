@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>thing of food</title>
+  <style>
+    body {
+      font-family: monospace;
+      text-align: center;
+      background-color: #fef6f6;
+    }
+    h1 {
+      font-family: sans-serif;
+      font-weight: normal;
+      margin: 60px 60px 5px;
+      font-size: 28px;
+      text-align: left;
+      color: #e5dddd;
+    }
+    #content {
+      margin: 0 20px 80px;
+      padding: 40px 30px 30px;
+      border-radius: 20px;
+      font-size: 56px;
+      background-color: white;
+    }
+    #button-panel {
+      margin-top: 40px;
+    }
+    button {
+      font-size: 20px;
+    }
+    #footer-a,
+    #footer-a:visited {
+      color: #e5dddd;
+      text-decoration: none;
+    }
+    #footer-a:hover,
+    #footer-a:active {
+      color: #958888;
+      font-weight: bold;
+    }
+    footer {
+      padding: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>thing of food</h1>
+  <div id="content">
+    <div id="result">
+      <span id="thing">Thing</span> of <span id="food">Food</span>
+    </div>
+    <div id="button-panel">
+      <button type="button" onclick="another()">Another?</button>
+    </div>
+  </div>
+  <a href="http://nigel.fyi" id="footer-a">
+    <footer>nigel did this</footer>
+  </a>
+  <script>
+    var things = [
+      "Bag", "Basket", "Beaker", "Bin", "Bottle", "Box", "Bucket", "Bundle",
+      "Can", "Canister", "Canteen", "Carton", "Cauldron", "Cup",
+      "Flask", "Fountain",
+      "Glass",
+      "Jar", "Jug",
+      "Packet", "Pot", "Pouch",
+      "Thermos", "Tub", "Tube",
+      "Vial"
+    ];
+    var foods = [
+      "Ale", "Applesauce",
+      "Bacon", "Bologna", "Bananas", "Bagels", "Beans", "Beef", "Beer", "Beets", "Bread",
+      "Cake", "Carrots", "Cheese", "Chicken", "Chicken Wings", "Chocolate Chips", "Corn", "Corn Dogs",
+      "Danishes", "Dill Pickles", "Doritos", "Dumplings",
+      "Eggs", "Eggnog", "Eggplants",
+      "Fish", "Fries", "Fruitcake", "Fruit Salad", "Fruit Snacks",
+      "Garlic", "Gelatin", "Gravy", "Ganache", "Grapefruit", "Ground Beef", "Guacamole",
+      "Ham",
+      "Ice Cream", "Ice Cubes",
+      "Jelly", "Jelly Beans", "Juice",
+      "Ketchup",
+      "Lasagna",
+      "Macaroni", "Mayonnaise", "Milk", "Muffins", "Mustard",
+      "Noodles",
+      "Oatmeal", "Onions",
+      "Peas", "Peanuts", "Peanut Butter", "Pepperoni", "Pickles", "Pizza", "Porridge", "Potatoes", "Potato Salad", "Prunes", "Pudding",
+      "Queso",
+      "Raisins", "Ribs", "Rice Pudding",
+      "Salami", "Salt", "Sausages", "Shrimp", "Soup", "Spaghetti", "Spam", "Steak", "Strudel", "Syrup",
+      "Taffy", "Toast", "Tofurkey", "Tomatoes", "Tuna",
+      "Veal", "Vodka",
+      "Waffles", "Water", "Watermelon",
+      "Yogurt"
+    ];
+    function randomItemFrom(array) {
+      return array[Math.floor(Math.random()*array.length)];
+    }
+    function another() {
+      document.getElementById("thing").innerHTML = randomItemFrom(things);
+      document.getElementById("food").innerHTML = randomItemFrom(foods);
+    }
+    another();
+  </script>
+</body>
